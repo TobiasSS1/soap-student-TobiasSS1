@@ -19,10 +19,10 @@ namespace WCFStudent
 		Student FindStudent(int ID);
 
 		[OperationContract]
-		string RemoveStudent();
+		void RemoveStudent(int id);
 
 		[OperationContract]
-		string EditStudent();
+		string EditStudent(int id, string navn, string efternavn, int alder);
 
 		[OperationContract]
 		string GetAllStudent();

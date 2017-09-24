@@ -29,16 +29,30 @@ namespace WCFStudent
 			return selected;
 		}
 
-
-		public string EditStudent()
+		public void RemoveStudent(int id)
 		{
-			throw new NotImplementedException();
+			var selected = Studenterliste.FirstOrDefault(x => x.Id == id);
+			Studenterliste.Remove(selected);
 		}
 
-	
-		public string GetAllStudent()
+		public string EditStudent(int id, string navn, string efternavn, int alder)
 		{
-			throw new NotImplementedException();
+			var selected = Studenterliste.FirstOrDefault(x => x.Id == id);
+			Studenterliste.Remove(selected);
+			var student = new Student(id, navn, efternavn, alder);
+			Studenterliste.Add(student);
+			return student.ToString();
+
+		}
+
+	//Returnere kun 1 elev...
+		public String GetAllStudent()
+		{
+			foreach (var Student in Studenterliste)
+			{
+				return Student.ToString();
+			}
+			throw new Exception("Der er en phantom studenter");
 		}
 
 		public string GetData(int value)
@@ -57,11 +71,6 @@ namespace WCFStudent
 				composite.StringValue += "Suffix";
 			}
 			return composite;
-		}
-
-		public string RemoveStudent()
-		{
-			throw new NotImplementedException();
 		}
 	}
 }
