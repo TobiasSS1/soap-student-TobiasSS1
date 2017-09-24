@@ -25,7 +25,7 @@ namespace WCFStudent
 		string EditStudent(int id, string navn, string efternavn, int alder);
 
 		[OperationContract]
-		string GetAllStudent();
+		List<Student> GetAllStudent();
 
 		[OperationContract]
 		string GetData(int value);

@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFStudent", "WCFStudent\WCFStudent.csproj", "{B7028686-DAA9-4406-8D14-E9398461E0B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFStudenterConsumer", "WCFStudenterConsumer\WCFStudenterConsumer.csproj", "{7E67D18E-F3E2-4ACB-8437-BB19B3220F98}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B7028686-DAA9-4406-8D14-E9398461E0B1} = {B7028686-DAA9-4406-8D14-E9398461E0B1}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{B7028686-DAA9-4406-8D14-E9398461E0B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7028686-DAA9-4406-8D14-E9398461E0B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7028686-DAA9-4406-8D14-E9398461E0B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E67D18E-F3E2-4ACB-8437-BB19B3220F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E67D18E-F3E2-4ACB-8437-BB19B3220F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E67D18E-F3E2-4ACB-8437-BB19B3220F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E67D18E-F3E2-4ACB-8437-BB19B3220F98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

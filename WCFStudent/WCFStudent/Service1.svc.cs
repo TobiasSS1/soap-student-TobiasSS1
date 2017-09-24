@@ -46,13 +46,9 @@ namespace WCFStudent
 		}
 
 	//Returnere kun 1 elev...
-		public String GetAllStudent()
+		public List<Student> GetAllStudent()
 		{
-			foreach (var Student in Studenterliste)
-			{
-				return Student.ToString();
-			}
-			throw new Exception("Der er en phantom studenter");
+			return Studenterliste;
 		}
 
 		public string GetData(int value)
