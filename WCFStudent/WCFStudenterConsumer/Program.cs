@@ -26,7 +26,7 @@ namespace WCFStudenterConsumer
 				Console.WriteLine("/remove");
 				Console.WriteLine("/find");
 				Console.WriteLine("/edit");
-				Console.WriteLine("/findall <- Virker ikke");
+				Console.WriteLine("/findall");
 				Console.WriteLine("###################################################");
 				Console.WriteLine(" ");
 
