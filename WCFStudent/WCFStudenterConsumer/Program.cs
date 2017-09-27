@@ -13,7 +13,7 @@ namespace WCFStudenterConsumer
 	class Program
 	{ 
 		/// <summary>
-		/// ok
+		/// ok2
 		/// </summary>
 		/// <param name="args"></param>
 		static void Main(string[] args)
