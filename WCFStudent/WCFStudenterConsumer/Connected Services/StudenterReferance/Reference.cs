@@ -196,10 +196,10 @@ namespace WCFStudenterConsumer.StudenterReferance {
         System.Threading.Tasks.Task<string> EditStudentAsync(int id, string navn, string efternavn, int alder);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllStudent", ReplyAction="http://tempuri.org/IService1/GetAllStudentResponse")]
-        string GetAllStudent();
+        WCFStudenterConsumer.StudenterReferance.Student[] GetAllStudent();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllStudent", ReplyAction="http://tempuri.org/IService1/GetAllStudentResponse")]
-        System.Threading.Tasks.Task<string> GetAllStudentAsync();
+        System.Threading.Tasks.Task<WCFStudenterConsumer.StudenterReferance.Student[]> GetAllStudentAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         string GetData(int value);
@@ -273,11 +273,11 @@ namespace WCFStudenterConsumer.StudenterReferance {
             return base.Channel.EditStudentAsync(id, navn, efternavn, alder);
         }
         
-        public string GetAllStudent() {
+        public WCFStudenterConsumer.StudenterReferance.Student[] GetAllStudent() {
             return base.Channel.GetAllStudent();
         }
         
-        public System.Threading.Tasks.Task<string> GetAllStudentAsync() {
+        public System.Threading.Tasks.Task<WCFStudenterConsumer.StudenterReferance.Student[]> GetAllStudentAsync() {
             return base.Channel.GetAllStudentAsync();
         }
         

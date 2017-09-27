@@ -7,10 +7,15 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+
 namespace WCFStudenterConsumer
 {
 	class Program
-	{
+	{ 
+		/// <summary>
+		/// ok
+		/// </summary>
+		/// <param name="args"></param>
 		static void Main(string[] args)
 		{
 			using (var Client = new StudenterReferance.Service1Client())
@@ -30,25 +35,25 @@ namespace WCFStudenterConsumer
 				string UserInput = Console.ReadLine();
 
 
-				//Find All
-				//if (UserInput.ToLower() == "/findall")
-				//{
-				//	foreach (var Student in Client.GetAllStudent())
-				//	{
-						
+					//Find All
+					if (UserInput.ToLower() == "/findall")
+					{
+						foreach (var Student in Client.GetAllStudent())
+						{
 
-				//		Console.WriteLine(" ");
-				//		Console.WriteLine("id        : " + Student.Id);
-				//		Console.WriteLine("navn      : " + Student.Navn);
-				//		Console.WriteLine("efternavn : " + Student.Efternavn);
-				//		Console.WriteLine("alder     : " + Student.Alder);
-				//		Console.WriteLine(" ");
 
-				//		}
-				//}
+							Console.WriteLine(" ");
+							Console.WriteLine("id        : " + Student.Id);
+							Console.WriteLine("navn      : " + Student.Navn);
+							Console.WriteLine("efternavn : " + Student.Efternavn);
+							Console.WriteLine("alder     : " + Student.Alder);
+							Console.WriteLine(" ");
 
-				//Find
-				if (UserInput.ToLower() == "/find")
+						}
+					}
+
+						//Find
+						if (UserInput.ToLower() == "/find")
 				{
 					Console.WriteLine("id:");
 					int id = Convert.ToInt32(Console.ReadLine());
